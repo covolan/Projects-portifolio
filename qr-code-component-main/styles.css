@@ -1,0 +1,57 @@
+/* setting the defaut settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+:root {
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+    --light-gray: hsl(212, 45%, 89%);
+}
+
+body {
+    background-color: var(--light-gray);
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.qr-code-div {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 15px;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.068);
+}
+
+img {
+    border-radius: 8px;
+}
+
+p, h1{
+    text-align: center;
+    padding-top: 1.2rem;
+}
+
+h1 {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+
+p {
+    font-size: 15px;
+    padding: 1rem 0.5rem;
+    font-weight: 400;
+    color: var(--grayish-blue);
+}
