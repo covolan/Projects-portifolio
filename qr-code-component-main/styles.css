@@ -23,6 +23,8 @@ body {
     height: 100vh;
 }
 
+/* main content */
+
 .qr-code-div {
     display: flex;
     flex-direction: column;
@@ -37,7 +39,8 @@ img {
     border-radius: 8px;
 }
 
-p, h1{
+p,
+h1 {
     text-align: center;
     padding-top: 1.2rem;
 }
@@ -48,10 +51,20 @@ h1 {
     font-weight: 700;
 }
 
-
 p {
     font-size: 15px;
     padding: 1rem 0.5rem;
     font-weight: 400;
     color: var(--grayish-blue);
+}
+
+/* Footer style provided */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
