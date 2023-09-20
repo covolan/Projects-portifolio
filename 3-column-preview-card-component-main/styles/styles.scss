@@ -24,6 +24,7 @@ $visu2: 1px solid red;
 body {
     display: grid;
     grid-template-columns: 1fr;
+    background-color: $very-light-gray;
     align-items: end;
     height: 100svh;
 }

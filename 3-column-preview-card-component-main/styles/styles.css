@@ -7,6 +7,7 @@
 body {
   display: grid;
   grid-template-columns: 1fr;
+  background-color: hsl(0, 0%, 95%);
   align-items: end;
   height: 100svh;
 }
@@ -79,6 +80,17 @@ body {
   color: hsl(179, 100%, 13%);
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+  margin: 20px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 @media screen and (max-width: 768px) and (min-width: 529px) {
   .cards-div {
     scale: 0.9;
@@ -107,14 +119,4 @@ body {
   .luxury {
     border-radius: 0px 0 10px 10px;
   }
-}
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  font-family: "Lexend Deca", sans-serif;
-  margin: 20px;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }/*# sourceMappingURL=styles.css.map */
