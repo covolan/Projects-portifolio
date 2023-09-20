@@ -40,6 +40,7 @@ body {
 
 .card {
     padding: 45px;
+
     p {
         font-size: 15px;
         font-family: 'Lexend Deca', sans-serif;
@@ -100,11 +101,27 @@ body {
     color: $very-dark-cyan;
 }
 
+// FOOTER PROVIDED
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+// MEDIA CONTENT 
+
 @media screen and (max-width: 768px) and (min-width: 529px) {
     .cards-div {
         scale: 0.9;
     }
-    .card{
+
+    .card {
         padding: 20px;
         text-align: center;
     }
@@ -134,17 +151,4 @@ body {
         border-radius: 0px 0 10px 10px;
     }
 
-}
-
-// FOOTER PROVIDED
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    font-family: 'Lexend Deca', sans-serif;
-    margin: 20px;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
 }

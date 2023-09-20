@@ -19,14 +19,16 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ## Overview
 
+For this project I mainly used vanilla HTML with SASS as my CSS framework/tool, I also used some additional sites listed on the Useful Resources section. **Note: the screenshot was made using GIMP**.
+
 ### Screenshot
 
 ![Webpage Screenshot](./images/3-colum-cards-print.jpeg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github-page](https://github.com/covolan/frontend-mentor/tree/main/3-column-preview-card-component-main)
+- Live Site URL: [Vercel hosting](https://3-column-preview-card-component-nine-beta.vercel.app/)
 
 ## My process
 
@@ -38,44 +40,236 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ### What I learned
 
+My initial thought was nesting the provided text with two divs, one for the use of grid display and the others for each of the columns of the grid. Gave the title a tag of h1 and the text paragraph tag, created a button and added the privided icon aswell. Each of the images was included with a alt and de cards-div the role main.
+
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="cards-div" role="main">
+    <div class="card sedans">
+      <img src="./images/icon-sedans.svg" alt="A icon of a sedan illustration">
+      <h1>Sedans</h1>
+      <p>
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+        or on your next road trip.
+      </p>
+      <button class="btn-learn-more sedans-btn">Learn More</button>
+    </div>
+    ...
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+
+Next, I adjusted the attribution privided giving it a complementary role and added the link to the google fonts provided.
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+  rel="stylesheet">
+  
+  ...
+
+<div class="attribution" role="complementary">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="https://www.frontendmentor.io/profile/covolan" target="_blank">Covolan</a>.
+</div>
+```
+
+The next step was creating the SASS initial file. Then added the colors as variables and some comments. I setted the initial conditions of the page.
+
+```scss
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+// (paragraphs)
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+// (background, headings, buttons)
+$very-light-gray: hsl(0, 0%, 95%);
+
+$visu: 1px solid black;
+$visu2: 1px solid red;
+
+// Font size: 15px
+// Mobile: 375px
+// Desktop: 1440px
+
+// SETTING INITIAL CONDITIONS
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+Next I adjusted the body to a grid layout, that because of the footed provided from FrontEnd Mentor, that way the main content is on the center-ish  of the page while the footer is on te bottom. Created also the main div for the cards, giving it a template of 3 columns and setted height, gave it a max width for larger displays aswell, justifying this div on center made so it could be on the center of the column in the grid display.
+
+```scss
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: end;
+    height: 100svh;
+}
+
+// CARDS
+
+.cards-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 900px;
+    min-height: 500px;
+    justify-self: center;
+}
+
+```
+
+After that I fine tunned the cards to look similar to the provided exemple. **Ps: I don't know why but SASS is giving the :hover part a space when compiled into CSS, so be aware when compiling yourself**.
+
+```scss
+.card {
+    padding: 45px;
+    p {
+        font-size: 15px;
+        font-family: 'Lexend Deca', sans-serif;
+        line-height: 25px;
+        color: $transparent-white;
+        font-weight: 400;
+    }
+
+    h1 {
+        font-family: 'Big Shoulders Display', cursive;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 40px;
+        margin: 35px 0;
+        color: $very-light-gray;
+    }
+}
+
+.btn-learn-more {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    margin-top: 90px;
+    background-color: $very-light-gray;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 25px;
+    transition: ease-in-out 0.3s;
+
+    :hover {
+        background-color: $transparent-white;
+        cursor: pointer;
+    }
+}
+
+```
+
+The next step was giving each background and button its color, and the border radius also.
+
+```scss
+
+.sedans {
+    background-color: $bright-orange;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.suvs {
+    background-color: $dark-cyan;
+}
+
+.luxury {
+    background-color: $very-dark-cyan;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.sedans-btn {
+    color: $bright-orange;
+}
+
+.suvs-btn {
+    color: $dark-cyan;
+}
+
+.luxury-btn {
+    color: $very-dark-cyan;
+}
+```
+
+Then I adjusted the footed provided style a bit to fit the content.
+
+```scss
+
+// FOOTER PROVIDED
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+```
+
+Next part took a little bit of testing on the debug screen on the web browser, I tried making as responsive as possible for every device. Eventually I want to explore the mobile first approach, but this project was made with the desktop first approach.
+
+```scss
+// MEDIA CONTENT 
+
+@media screen and (max-width: 768px) and (min-width: 529px) {
+    .cards-div {
+        scale: 0.9;
+    }
+
+    .card {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .body {
+        height: 100svh;
+    }
+
+    .cards-div {
+        grid-template-columns: 1fr;
+        min-height: unset;
+    }
+
+    .cards-div {
+        max-width: unset;
+        min-height: unset;
+        scale: 0.8;
+    }
+
+    .sedans {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .luxury {
+        border-radius: 0px 0 10px 10px;
+    }
+
 }
 ```
 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+For future responsive projects I want to try the mobile first approach to see the difference in production and the final result.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [SASS Documentation](https://sass-lang.com/documentation/) - I used the SASS documentation when utilizing the tool.
+- [ARIA practices](https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/general-principles.html) - Used this website to guide me through the ARIA best practices.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Github - [Covolan](https://github.com/covolan)
+- Frontend Mentor - [@Covolan](https://www.frontendmentor.io/profile/covolan)
+- LinkedIn - [@alexandre-covolan](https://www.linkedin.com/in/alexandre-covolan/)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+This project helped me to use SASS, ARIA best practices, grid responsive layout and scale on the media responsive layout.
