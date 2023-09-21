@@ -23,8 +23,8 @@ This is a solution to the [Single price grid component challenge on Frontend Men
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/covolan/frontend-mentor/edit/main/single-price-grid-component-master/)
+- Live Site URL: [Webpage](https://single-price-grid-covolan.vercel.app/)
 
 ## My process
 
