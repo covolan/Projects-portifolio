@@ -1,88 +1,291 @@
-# Frontend Mentor - Single price grid component
+# Frontend Mentor - Single price grid component solution
 
-![Design preview for the Single price grid component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Single price grid component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned and thought process](#what-i-learned-and-thought-process)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+### Screenshot
 
-## The challenge
+![Screenshot of the website for desktop and mobile](./screenshot.jpeg)
 
-Your users should be able to:
+### Links
 
-- View the optimal layout for the component depending on their device's screen size
-- See a hover state on desktop for the Sign Up call-to-action
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+## My process
 
-## Where to find everything
+### Built with
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+- Semantic HTML5 markup
+- SASS
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### What I learned and thought process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+This website end up beeing quite robust in the CSS section. My thought process was as follow:
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+First I made the markdown section of the document, creating a main div to centralize the content. Then I made 3 divs, to separate the top from the bottom cards, mark the title, subtitle and paragraph. Made thee button and the unordered list, also made a aditional div to the dollar part of the left bottom card.
 
-## Building your project
+```html
+<div class="main-div" role="main">
+  <div class="top-card">
+    <h1>Join our community</h1>
+    <h2>30-day, hassle-free money back guarantee</h2>
+    <p>
+      Gain access to our full library of tutorials along with expert code
+      reviews.
+    </p>
+    <p>Perfect for any developers who are serious about honing their skills.</p>
+  </div>
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+  <div class="left-bottom-card">
+    <h2>Monthly Subscription</h2>
+    <div>
+      <span>&dollar;29</span>
+      <p>per month</p>
+    </div>
+    <p class="pre-button-p">Full access for less than &dollar;1 a day</p>
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+    <button>Sign Up</button>
+  </div>
 
-## Deploying your project
+  <div class="right-bottom-card">
+    <h2>Why Us</h2>
+    <ul>
+      <li>Tutorials by industry experts</li>
+      <li>Peer &amp; expert code review</li>
+      <li>Coding exercises</li>
+      <li>Access to our GitHub repos</li>
+      <li>Community forum</li>
+      <li>Flashcard decks</li>
+      <li>New videos every week</li>
+    </ul>
+  </div>
+</div>
+```
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+Then I started the CSS part of the website. First setting the provided colors and the document proprieties.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+```scss
+// Primary
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+$cyan: hsl(179, 62%, 43%);
+$cyan2: hsla(179, 62%, 43%, 0.705);
+$bright-yellow: hsl(71, 73%, 54%);
 
-## Create a custom `README.md`
+// Neutral
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+// Font size: 16px
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+```
 
-## Submitting your solution
+Then I styled the body and made so the content would be centered on the screen.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+```scss
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  background-color: $light-gray;
+}
+```
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+The next step was creating the grid display on the main div and finetunning it so would look like the provided design.
+Then placed the top card so it would occupy the first 2 columns on the first row. Then styled the content.
 
-## Sharing your solution
+```scss
+.main-div {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.8fr 1.2fr;
+  color: $light-gray;
+  box-shadow: 0 0 0.8em gray;
+  border-radius: 1em;
+  margin: 1.4em;
+  h2 {
+    font-size: 1.3em;
+  }
+  div {
+    padding: 2.5em;
+  }
 
-There are multiple places you can share your solution:
+  .top-card {
+    background-color: white;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    border-radius: 0.8em 0.8em 0 0;
+    h1 {
+      color: $cyan;
+      padding-bottom: 1em;
+      font-size: 1.6em;
+    }
+    h2 {
+      color: $bright-yellow;
+      font-size: 1.2em;
+    }
+    p {
+      color: $grayish-blue;
+      line-height: 1em;
+      padding-top: 1em;
+    }
+  }
+}
+```
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+The next step was the left bottom card, I tried to style it as close as possible to the provided design. I know that there is a lot of unecessary code and a elegant solution probably was possible, but this is what I ended up doing for this part.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+```scss
+.left-bottom-card {
+  background-color: $cyan;
+  border-bottom-left-radius: 0.8em;
+  h2 {
+    padding-bottom: 1em;
+    font-size: 1.3em;
+  }
+  span {
+    font-size: 2.5em;
+    padding-right: 0.4em;
+  }
+  div {
+    padding: unset;
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em;
+    p {
+      color: rgba(255, 255, 255, 0.568);
+      font-size: 1.2em;
+    }
+  }
+  .pre-button-p {
+    padding-bottom: 2em;
+  }
+  button {
+    padding: 0.8em;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    color: $light-gray;
+    background-color: $bright-yellow;
+    box-shadow: 0 0 8px gray;
+    transition: 0.3s ease-in-out;
+  }
+  button:hover {
+    background-color: hsl(71, 62%, 46%);
+  }
+}
+```
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+The final card was pretty simple to style, just remove the list style, adjust the paddings fix the colors and the border.
 
-## Got feedback for us?
+```scss
+.right-bottom-card {
+  background-color: $cyan2;
+  border-bottom-right-radius: 0.8em;
+  ul {
+    padding-top: 1.5em;
+    li {
+      list-style-type: none;
+      padding-bottom: 0.3em;
+      color: rgba(255, 255, 255, 0.568);
+    }
+  }
+}
+```
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+Then I styled the provided footer so it would look nicer.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+```scss
+footer {
+  padding: 2em;
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  a {
+    color: $cyan;
+    text-decoration: none;
+  }
+  a:visited {
+    color: $cyan2;
+  }
+}
+```
 
-**Have fun building!** 🚀
+The final step was creating a media query for a responsive website. The first step was changing the body height because it was cutting the top
+of the card, then adjust the grid layout to display only one column and ajust the borders of the cards.
+
+```scss
+@media screen and (max-width: 620px) {
+  body {
+    height: 100%;
+  }
+
+  .main-div {
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+    .top-card {
+      grid-column-start: unset;
+      grid-column-end: unset;
+      grid-row-start: unset;
+      grid-row-end: unset;
+      border-radius: 0.8em 0.8em 0 0;
+    }
+    .left-bottom-card {
+      border-radius: unset;
+    }
+    .right-bottom-card {
+      border-radius: 0 0 0.8em 0.8em;
+    }
+  }
+}
+```
+
+### Continued development
+
+Was quite nice to continue working with SASS. In this project the SCSS file was bigger than the CSS file, but was organized and I ended up liking the final look, even though I'm pretty sure that was a simpler way to do it. For the next projects I want to improve the development
+of the css part, trying to make simpler.
+
+### Useful resources
+
+I used the css grid guide to help me manipulate the grid layout: [A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/).
+
+
+## Author
+
+- Github - [Covolan](https://github.com/covolan)
+- Frontend Mentor - [@Covolan](https://www.frontendmentor.io/profile/covolan)
+- LinkedIn - [@alexandre-covolan](https://www.linkedin.com/in/alexandre-covolan/)
+
+## Acknowledgments
+
+That was quite a nice project to get used to SASS and responsive layout.
