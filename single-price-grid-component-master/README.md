@@ -111,7 +111,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100svh;
+  min-height: 100vh;
   background-color: $light-gray;
 }
 ```
@@ -241,14 +241,14 @@ footer {
 }
 ```
 
-The final step was creating a media query for a responsive website. The first step was changing the body height because it was cutting the top
-of the card, then adjust the grid layout to display only one column and ajust the borders of the cards.
+The final step was creating a media query for a responsive website. The first step was changing the body height because it was cutting the top of the card, then adjust the grid layout to display only one column and ajust the borders of the cards.
+**Edit @hitmorecode helped with the page height, so the 100% height can be removed from this part of the code!**
 
 ```scss
 @media screen and (max-width: 620px) {
-  body {
-    height: 100%;
-  }
+  // body {
+  //   height: 100%;
+  // }
 
   .main-div {
     grid-template-columns: 1fr;
@@ -288,4 +288,4 @@ I used the css grid guide to help me manipulate the grid layout: [A Complete Gui
 
 ## Acknowledgments
 
-That was quite a nice project to get used to SASS and responsive layout.
+That was quite a nice project to get used to SASS and responsive layout. Thanks for the help with the page height [@hitmorecode](https://www.frontendmentor.io/profile/hitmorecode).

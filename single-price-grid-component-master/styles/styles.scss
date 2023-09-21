@@ -26,7 +26,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100svh;
+    min-height: 100vh;
     background-color: $light-gray;
 }
 
@@ -139,10 +139,6 @@ footer {
 }
 
 @media screen and (max-width: 620px) {
-    body {
-        height: 100%;
-    }
-    
     .main-div {
         grid-template-columns: 1fr;
         grid-template-rows: unset;
