@@ -1,6 +1,6 @@
 # Hi everyone :wave:
 
-This is my repo for the Frontend Mentor challenges and projects!
+This is my repo 1 for the Frontend Mentor challenges and projects!
 
 Feel free to explore and fork this repo. Comments and suggestions are welcome! :smile:
 
