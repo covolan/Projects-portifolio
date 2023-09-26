@@ -4,7 +4,7 @@ This is my repo 1 for the Frontend Mentor challenges and projects!
 
 Feel free to explore and fork this repo. Comments and suggestions are welcome! :smile:
 
-If you want to view each project, just hop into my repo page and click the links into the "pages" section.
+If you want to view each project, just hop into my repo [page](https://covolan.github.io/frontend-mentor1/) and click the links into the "pages" section.
 
 ## So far those are the challenges that I worked on:
 
