@@ -1,0 +1,144 @@
+// background colors:
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+
+// text colors:
+$very-dark-grayish-blue: hsl(237, 12%, 33%);
+$dark-grayish-blue: hsl(240, 6%, 50%);
+
+// dividers color:
+$light-grayish-blue: hsl(240, 5%, 91%);
+
+:root {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient($soft-violet, $soft-blue) no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .main-content-div {
+        background: url(../images/bg-pattern-desktop.svg) no-repeat white;
+        background-position: -35rem -18rem;
+        // border: 1px solid black;
+        height: 500px;
+        width: 90vw;
+        max-width: 950px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 25px;
+
+        .left-side-div {
+            // border: 1px solid black;
+            position: inherit;
+            .womam-illustration {
+                position: relative;
+                left: -80px;
+                top: 70px;
+                clip-path: polygon(17% 0, 100% 0, 100% 100%, 17% 100%);
+            }
+            .box-box {
+                position: relative;
+                left: -93px;
+                top: -158px;
+            }
+        
+        }
+        .right-side-div {
+            padding: 2.5rem 5rem 0 0;
+            .question {
+                border-bottom: 1px solid $light-grayish-blue;
+                padding: 20px 0;
+                display: grid;
+                grid-template-columns: 5fr 1fr;
+                font-size: 12px;
+                
+                .dropdown {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    position: inherit;
+                }
+
+                .btn-drop {
+                    background-color: transparent;
+                    position: relative;
+                    left: 14px;
+                    height: 12px;
+                    width: 15px;
+                    border: none;
+                }
+
+                .arrow {
+                    width: 12px;
+                    height: 10px;
+                    justify-self: flex-end;
+                }
+            }
+
+            .answer {
+                display: none;
+            }
+        }
+    }
+}
+
+.attribution {
+    border: 1px solid black;
+    margin: 2rem;
+}
+
+@media (max-width: 1035px) and (min-width: 900px) {
+    body .main-content-div .right-side-div {
+        padding:2.5rem 2rem 0 0;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        overflow: auto;
+        padding-top: 9rem;
+    }
+    
+    body .main-content-div {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        background-position: 50% -55%;
+        background-size: 0%;
+        height: 60%;
+
+
+        .left-side-div {
+            border: 1px solid black;
+            height: 10%;
+        }
+
+        .right-side-div {
+            border: 1px solid black;
+            padding: 0px 20px;
+            height: auto;
+
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+
+    body .main-content-div .left-side-div .womam-illustration {
+        position: unset;
+        top: unset;
+        left: unset;
+        width: 270px;
+        clip-path: none;
+    }
+
+    body .main-content-div .left-side-div .box-box {
+        width: 30%;
+        position: relative;
+    }
+}

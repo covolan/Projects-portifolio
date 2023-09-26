@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  max-width: 69.375em;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.625em;
+  margin: 1em;
+}
+.main .header-img {
+  order: 2;
+  background-color: hsl(277, 64%, 61%);
+}
+.main .header-img img {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+  border-radius: 0 0.625em 0.625em 0;
+}
+.main .product {
+  display: flex;
+  flex-direction: column;
+  padding: 4.375em;
+  font-family: "Inter", sans-serif;
+}
+.main .product h1 {
+  font-size: 2.3em;
+  color: hsl(0, 0%, 100%);
+}
+.main .product h1 .violet {
+  color: hsl(277, 64%, 61%);
+}
+.main .product .description {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 1em;
+  padding: 2em 0;
+  line-height: 1.6em;
+}
+.main .product .stats {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  color: hsla(0, 0%, 100%, 0.6);
+  max-width: 23em;
+}
+.main .product .stats .info-number {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.4em;
+}
+.main .product .stats .info-description {
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+.attribution {
+  font-size: 1em;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  margin: 1em;
+}
+
+.attribution a {
+  color: hsl(277, 64%, 61%);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 870px) and (min-width: 720px) {
+  .main .product {
+    padding: 2em;
+  }
+}
+@media screen and (max-width: 720px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  .main .header-img {
+    order: 0;
+  }
+  .main .header-img img {
+    border-radius: 0.625em 0.625em 0 0;
+  }
+  .main .product {
+    padding: 2em;
+    text-align: center;
+    align-items: center;
+  }
+  .main .product h1 {
+    font-size: 1.8em;
+  }
+  .main .stats {
+    flex-direction: column;
+    gap: 1em;
+  }
+}/*# sourceMappingURL=style.css.map */

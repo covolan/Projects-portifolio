@@ -24,15 +24,12 @@ body {
   border-radius: 1em;
   margin: 1.4em;
 }
-
 .main-div h2 {
   font-size: 1.3em;
 }
-
 .main-div div {
   padding: 2.5em;
 }
-
 .main-div .top-card {
   background-color: white;
   grid-column-start: 1;
@@ -41,55 +38,45 @@ body {
   grid-row-end: 1;
   border-radius: 0.8em 0.8em 0 0;
 }
-
 .main-div .top-card h1 {
   color: hsl(179, 62%, 43%);
   padding-bottom: 1em;
   font-size: 1.6em;
 }
-
 .main-div .top-card h2 {
   color: hsl(71, 73%, 54%);
   font-size: 1.2em;
 }
-
 .main-div .top-card p {
   color: hsl(218, 22%, 67%);
   line-height: 1em;
   padding-top: 1em;
 }
-
 .main-div .left-bottom-card {
   background-color: hsl(179, 62%, 43%);
   border-bottom-left-radius: 0.8em;
 }
-
 .main-div .left-bottom-card h2 {
   padding-bottom: 1em;
   font-size: 1.3em;
 }
-
 .main-div .left-bottom-card span {
   font-size: 2.5em;
   padding-right: 0.4em;
 }
-
 .main-div .left-bottom-card div {
   padding: unset;
   display: flex;
   align-items: center;
   padding-bottom: 1em;
 }
-
 .main-div .left-bottom-card div p {
   color: rgba(255, 255, 255, 0.568);
   font-size: 1.2em;
 }
-
 .main-div .left-bottom-card .pre-button-p {
   padding-bottom: 2em;
 }
-
 .main-div .left-bottom-card button {
   padding: 0.8em;
   width: 100%;
@@ -102,20 +89,16 @@ body {
   box-shadow: 0 0 8px gray;
   transition: 0.3s ease-in-out;
 }
-
 .main-div .left-bottom-card button:hover {
   background-color: hsl(71, 62%, 46%);
 }
-
 .main-div .right-bottom-card {
   background-color: hsla(179, 62%, 43%, 0.705);
   border-bottom-right-radius: 0.8em;
 }
-
 .main-div .right-bottom-card ul {
   padding-top: 1.5em;
 }
-
 .main-div .right-bottom-card ul li {
   list-style-type: none;
   padding-bottom: 0.3em;
@@ -128,12 +111,10 @@ footer {
   font-weight: 700;
   text-align: center;
 }
-
 footer a {
   color: hsl(179, 62%, 43%);
   text-decoration: none;
 }
-
 footer a:visited {
   color: hsla(179, 62%, 43%, 0.705);
 }
@@ -143,7 +124,6 @@ footer a:visited {
     grid-template-columns: 1fr;
     grid-template-rows: unset;
   }
-
   .main-div .top-card {
     grid-column-start: unset;
     grid-column-end: unset;
@@ -151,14 +131,10 @@ footer a:visited {
     grid-row-end: unset;
     border-radius: 0.8em 0.8em 0 0;
   }
-
   .main-div .left-bottom-card {
     border-radius: unset;
   }
-
   .main-div .right-bottom-card {
     border-radius: 0 0 0.8em 0.8em;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

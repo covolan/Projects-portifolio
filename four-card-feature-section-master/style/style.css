@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  text-align: center;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 98%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: hsl(234, 12%, 34%);
+  margin: 3em 1.5em;
+}
+.header-container h1 {
+  font-size: 2.1em;
+  font-weight: 200;
+}
+.header-container h2 {
+  font-size: 2.1em;
+}
+.header-container p {
+  color: hsl(229, 6%, 66%);
+  max-width: 35em;
+  align-self: center;
+  margin: 1em 0;
+}
+
+.content-container {
+  margin-top: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin: 2em;
+}
+.content-container .middle-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  text-align: left;
+  box-shadow: 0 8px 20px hsla(234, 12%, 34%, 0.212);
+  padding: 1.5em;
+  max-width: 22em;
+  min-height: 15em;
+  border-radius: 0.5em;
+}
+.card .card-title {
+  font-size: 1.2em;
+  color: hsl(234, 12%, 34%);
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.card p {
+  margin-bottom: 3em;
+  color: hsl(229, 6%, 66%);
+  font-weight: 200;
+  font-size: 0.9em;
+}
+.card img {
+  width: 4.2em;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.supervisor {
+  border-top: 0.3em solid hsl(180, 62%, 55%);
+}
+
+.team-builder {
+  border-top: 0.3em solid hsl(0, 78%, 62%);
+}
+
+.calculator {
+  border-top: 0.3em solid hsl(212, 86%, 64%);
+}
+
+.karma {
+  border-top: 0.3em solid hsl(34, 97%, 64%);
+}
+
+.attribution {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.attribution a {
+  color: hsl(234, 12%, 34%);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1120px) and (min-width: 745px) {
+  .card {
+    max-width: unset;
+    width: 40em;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .content-container {
+    flex-direction: column;
+  }
+  .header-container h1 {
+    font-size: 1.6em;
+  }
+  .header-container h2 {
+    font-size: 1.6em;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+$very-dark-blue: hsl(233, 47%, 7%);
+$dark-desaturated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+$soft-violet2: hsl(277, 100%, 43%);
+
+$white: hsl(0, 0%, 100%);
+$slightly-transparent-white1: hsla(0, 0%, 100%, 0.75);
+$slightly-transparent-white2: hsla(0, 0%, 100%, 0.6);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $very-dark-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 69.375em;
+    background-color: $dark-desaturated-blue;
+    border-radius: 0.625em;
+    margin: 1em;
+    .header-img {
+        order: 2;
+        background-color: $soft-violet;
+        img {
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: multiply;
+            opacity: 0.75;
+            border-radius: 0 0.625em 0.625em 0;
+        }
+    }
+    .product {
+        display: flex;
+        flex-direction: column;
+        padding: 4.375em;
+        font-family: 'Inter', sans-serif;
+        h1 {
+            font-size: 2.3em;
+            color: $white;
+            .violet {
+                color: $soft-violet;
+            }
+        }
+        .description {
+            color: $slightly-transparent-white1;
+            font-size: 1em;
+            padding: 2em 0;
+            line-height: 1.6em;
+        }
+        .stats {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            color: $slightly-transparent-white2;
+            max-width: 23em;
+            .info-number {
+                color: $white;
+                font-weight: 700;
+                font-size: 1.4em;
+            }
+            .info-description {
+                font-family: 'Lexend Deca', sans-serif;
+                text-transform: uppercase;
+                font-size: 0.7em;
+            }
+        }
+    }
+}
+
+.attribution {
+    font-size: 1em;
+    color: $white;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    margin: 1em;
+  }
+
+  .attribution a {
+    color: $soft-violet;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+@media screen and (max-width: 870px) and (min-width: 720px) {
+    .main {
+        .product {
+            padding: 2em;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .main {
+        grid-template-columns: 1fr;
+        .header-img {
+            order: 0;
+            img {
+                border-radius: 0.625em 0.625em 0 0;
+            }
+        }
+        .product {
+            padding: 2em;
+            text-align: center;
+            align-items: center;
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+        .stats {
+            flex-direction: column;
+            gap: 1em;
+
+        }
+    }
+}

@@ -1,0 +1,175 @@
+// - Mobile: 375px
+// - Desktop: 1440px
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+// - Font size (paragraph): 1em
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/pattern-background-desktop.svg) no-repeat;
+    background-size: contain;
+    background-color: $pale-blue;
+}
+
+.main-div {
+    max-width: 452px;
+    max-height: 700px;
+    background-color: white;
+    text-align: center;
+    border-radius: 1.125em;
+}
+
+.hero-img {
+    img {
+        min-width: 100%;
+        min-height: 100%;
+        border-radius: 1.125em 1.125em 0 0;
+    }
+}
+
+.product-description {
+    padding: 3em;
+
+    h1 {
+        color: $dark-blue;
+        font-weight: 900;
+    }
+
+    font-size: 1em;
+
+    .description {
+        padding: 1.5625em 0;
+        color: $desaturated-blue;
+    }
+
+    .plan-div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.125em;
+        background-color: $very-pale-blue;
+        padding: 1.25em;
+        margin-bottom: 2.1875em;
+        border-radius: 0.625em;
+
+        p:nth-child(3) {
+            font-weight: 700;
+        }
+
+        .plan-anual {
+            font-weight: 700;
+            color: $dark-blue;
+            margin-left: -3em;
+        }
+
+        .price {
+            margin-left: -3em;
+            color: $desaturated-blue;
+        }
+    }
+
+    .btn-div {
+        display: flex;
+        flex-direction: column;
+
+        button {
+            font-weight: 700;
+            border: none;
+            padding: 1em;
+            border-radius: 0.625em;
+            transition: .3s ease-in-out;
+        }
+
+        .payment-btn {
+            color: white;
+            background-color: $bright-blue;
+            box-shadow: 0 0.625em 1.25em hsla(245, 68%, 46%, 0.63);
+            z-index: 1;
+        }
+
+        .payment-btn:hover {
+            background-color: hsl(245, 70%, 33%);
+        }
+
+        .cancel-btn {
+            background-color: white;
+            color: $desaturated-blue;
+            margin-top: 1.5625em;
+        }
+
+        .cancel-btn:hover {
+            background-color: rgb(234, 238, 255);
+        }
+    }
+}
+
+.attribution {
+    font-size: 1em;
+    text-align: center;
+    max-width: 300px;
+    padding: 2em;
+    font-weight: 700;
+}
+
+.attribution a {
+    color: $bright-blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .body {
+        background: url(../images/pattern-background-mobile.svg) no-repeat;
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    .main-div {
+        max-width: unset;
+        max-height: unset;
+        width: 90%;
+    }
+
+    .hero-img {
+        img {
+            width: 100%;
+        }
+    }
+
+    .product-description {
+        padding: 1em;
+
+        .plan-div {
+            justify-content: space-between;
+            gap: unset;
+
+            .plan-anual {
+                margin-left: unset;
+            }
+
+            .price {
+                margin-left: unset;
+            }
+        }
+
+    }
+}

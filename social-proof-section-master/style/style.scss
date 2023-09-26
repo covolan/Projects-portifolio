@@ -1,0 +1,210 @@
+
+$very-dark-magenta: hsl(300, 43%, 22%);
+$soft-pink: hsl(333, 80%, 67%);
+$dark-grayish-magenta: hsl(303, 10%, 53%);
+$light-grayish-magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../images/bg-pattern-bottom-desktop.svg), url(../images/bg-pattern-top-desktop.svg);
+    background-position: bottom right, top left;
+    background-repeat: no-repeat;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3em;
+}
+
+.top-left-content {
+    max-width: 28em;
+    h1 {
+        font-size: 3.5em;
+        margin-bottom: 0.5em;
+        color: $very-dark-magenta;
+    }
+    p {
+        line-height: 1.5em;
+        color: $dark-grayish-magenta;
+        font-size: 1.2em;
+    }
+}
+
+.top-right-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2em;
+    margin-left: 10%;
+    .star-card {
+        display: flex;
+        align-items: center;
+        padding: 1.2em;
+        background-color: $light-grayish-magenta;
+        gap: 2em;
+        max-width: 29em;
+        border-radius: 0.5em;
+        img {
+            margin-right: 0.2em;
+        }
+        div {
+            margin-left: 1em;
+        }
+        p {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: $very-dark-magenta;
+        }
+    }
+    .star-card:nth-child(2) {
+        margin-left: 3em;
+    }
+
+    .star-card:nth-child(3) {
+        margin-left: 6em;
+    }
+}
+
+.card-content{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 4em;
+    min-height: 20em;
+    .card {
+        border-radius: 0.5em;
+        max-width: 25em;
+        max-height: 16em;
+        background-color: $very-dark-magenta;
+        color: $white;
+        padding: 2.2em;
+        .card-top {
+            display: flex;
+            align-items: center;
+            gap: 2em;
+            margin-bottom: 2em;
+            img {
+                width: 3em;
+                height: auto;
+                border-radius: 50%;
+            }
+            ul {
+                list-style: none;
+                .name {
+                    font-weight: 500;
+                    margin-bottom: 0.5em;
+                }
+                .legend {
+                    color: $soft-pink;
+                }
+            }
+        }
+        p {
+            line-height: 1.5em;
+            font-size: 1.1em;
+        }
+    }
+    .card:nth-child(2) {
+        margin-top: 1.5em;
+    }
+    .card:nth-child(3) {
+        margin-top: 3em;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width:876px) {
+    .card-content{
+        gap: 1em;
+        .card {
+            max-height: 20em;
+        }
+    }
+    .top-right-content {
+        margin-left: 10%;
+        .star-card {
+            flex-direction: column;
+            gap: 1em;
+        }
+        .star-card:nth-child(2) {
+            margin-left: unset;
+        }
+    
+        .star-card:nth-child(3) {
+            margin-left: unset;
+        }
+    }
+}
+
+@media screen and (max-width: 875px) {
+    body {
+        overflow-x: hidden;
+        background-image: url(../images/bg-pattern-bottom-mobile.svg), url(../images/bg-pattern-top-mobile.svg);
+    }
+    .main {
+        grid-template-columns: 1fr;
+        margin: 5em 1em;
+    }
+    
+    .top-left-content {
+        text-align: center;
+        h1 {
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.1em;
+        }
+    }
+
+    .card-content{
+        grid-column-start: unset;
+        grid-column-end: unset;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        .card {
+            max-height: unset;
+        }
+        .card:nth-child(2) {
+            margin-top: unset;
+        }
+        .card:nth-child(3) {
+            margin-top: unset;
+        }
+    }
+
+    .top-right-content {
+        margin-left: unset;
+        div {
+            margin-left: unset;
+        }
+        .star-card {
+            flex-direction: column;
+            gap: 0.8em;
+            padding: 0.6em;
+        }
+        .star-card:nth-child(2) {
+            margin-left: unset;
+        }
+    
+        .star-card:nth-child(3) {
+            margin-left: unset;
+        }
+    }
+}

@@ -1,0 +1,154 @@
+// - Mobile: 375px
+// - Desktop: 1440px
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+$very-dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    text-align: center;
+    min-height: 100vh;
+    background-color: $very-light-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $very-dark-blue;
+    margin: 3em 1.5em;
+
+    h1 {
+        font-size: 2.1em;
+        font-weight: 200;
+    }
+
+    h2 {
+        font-size: 2.1em;
+    }
+
+    p {
+        color: $grayish-blue;
+        max-width: 35em;
+        align-self: center;
+        margin: 1em 0;
+    }
+}
+
+.content-container {
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    margin: 2em;
+
+    .middle-column {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-align: left;
+    box-shadow: 0 8px 20px hsla(234, 12%, 34%, 0.212);
+    padding: 1.5em;
+    max-width: 22em;
+    min-height: 15em;
+    border-radius: 0.5em;
+
+    .card-title {
+        font-size: 1.2em;
+        color: $very-dark-blue;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        margin-bottom: 3em;
+        color: $grayish-blue;
+        font-weight: 200;
+        font-size: 0.9em;
+    }
+
+    img {
+        width: 4.2em;
+        align-self: flex-end;
+        margin-top: auto;
+    }
+}
+
+.supervisor {
+    border-top: 0.3em solid $cyan;
+}
+
+.team-builder {
+    border-top: 0.3em solid $red;
+}
+
+.calculator {
+    border-top: 0.3em solid $blue;
+}
+
+.karma {
+    border-top: 0.3em solid $orange;
+}
+
+.attribution {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.attribution a {
+    color: $very-dark-blue;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1120px) and (min-width: 745px) {
+    .card {
+        max-width: unset;
+        width: 40em;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .header-container {
+        h1 {
+            font-size: 1.6em;
+        }
+
+        h2 {
+            font-size: 1.6em;
+        }
+    }
+}
