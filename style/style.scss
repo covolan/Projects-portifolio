@@ -1,325 +1,332 @@
-@import url('https://fonts.googleapis.com/css2?family=Karma:wght@400;500;700&family=Koulen&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karma:wght@400;500;700&family=Koulen&display=swap");
 
 $dark-grey: #353535;
-$dark-cyan: #3C6E71;
-$white: #FFFFFF;
-$light-gray: #D9D9D9;
-$dark-blue: #284B63;
+$dark-cyan: #3c6e71;
+$white: #ffffff;
+$light-gray: #d9d9d9;
+$dark-blue: #284b63;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 nav {
-    width: 100%;
-    height: 60px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  gap: 2em;
+  background-color: $light-gray;
+  font-family: "Koulen", cursive;
+  box-shadow: 0px 1px 13px 0px rgba(60, 110, 113, 0.3);
+  border-radius: 0 0 8px 8px;
+  z-index: 100;
+
+  .nav-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    padding-left: 2em;
+    color: $dark-cyan;
+  }
+
+  ul {
     display: flex;
-    align-items: center;
-    position: fixed;
-    gap: 2em;
-    background-color: $light-gray;
-    font-family: 'Koulen', cursive;
-    box-shadow: 0px 1px 13px 0px rgba(60, 110, 113, 0.30);
-    border-radius: 0 0 8px 8px;
-    z-index: 100;
+    gap: 1em;
+    list-style: none;
+    margin-left: auto;
+    padding-right: 2.5em;
+    font-size: 1.1em;
 
-    .nav-title {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 1.5em;
-        letter-spacing: 0.1em;
-        padding-left: 2em;
-        color: $dark-cyan;
+    a {
+      text-decoration: none;
+      color: $dark-blue;
+      padding: 0.2em 0.5em;
+      border-radius: 0.2em;
+      transition: 0.3s ease-in-out;
     }
 
-    ul {
-        display: flex;
-        gap: 1em;
-        list-style: none;
-        margin-left: auto;
-        padding-right: 2.5em;
-        font-size: 1.1em;
-
-        a {
-            text-decoration: none;
-            color: $dark-blue;
-            padding: 0.2em 0.5em;
-            border-radius: 0.2em;
-            transition: 0.3s ease-in-out;
-        }
-
-        a:hover {
-            background-color: $white;
-        }
+    a:hover {
+      background-color: $white;
     }
+  }
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1px 1fr;
-    font-family: 'Karma', serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  font-family: "Karma", serif;
+  align-self: center;
+  max-width: 1440px;
+  background-color: $white;
+
+  .img-div {
+    z-index: 2;
     align-self: center;
-    max-width: 1440px;
-    background-color: $white;
-    
-    .img-div {
-        z-index: 2;
-        align-self: center;
-        justify-self: center;
-        margin: 4em 0 2em 0 ;
+    justify-self: center;
+    margin: 4em 0 2em 0;
 
-        img {
-            width: 22em;
-            border-radius: 50%;
-        }
+    img {
+      width: 22em;
+      border-radius: 50%;
+    }
+  }
+
+  .middle-bar {
+    border-left: 1px solid black;
+    height: 60%;
+    align-self: center;
+    margin-bottom: 2em;
+    z-index: 2;
+  }
+
+  .content-div {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    margin: 4em 2em 8em 2em;
+    z-index: 2;
+
+    h1 {
+      font-size: 2.5em;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5em;
+      color: $dark-blue;
     }
 
-    .middle-bar {
-        border-left: 1px solid black;
-        height: 60%;
-        align-self: center;
-        margin-bottom: 2em;
-        z-index: 2;
-
+    p {
+      font-size: 1.1em;
+      max-width: 30em;
     }
 
-    .content-div {
-        align-self: center;
-        justify-self: center;
-        text-align: center;
-        margin: 4em 2em 8em 2em;
-        z-index: 2;
-
-        h1 {
-            font-size: 2.5em;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.5em;
-            color: $dark-blue;
-        }
-
-        p {
-            font-size: 1.1em;
-            max-width: 30em;
-        }
-
-        .emphasis {
-            text-decoration: none;
-            color: black;
-            font-weight: 700;
-        }
-
-        .emphasis:hover {
-            text-decoration: underline;
-        }
+    .emphasis {
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
     }
 
-    .blob-motion {
-        position: absolute;
-        z-index: 1;
-        transform: translateX(-10%) translateY(-5%);
-        
-        #visual {
-            width: 100%;
-        }
+    .emphasis:hover {
+      text-decoration: underline;
     }
+  }
+
+  .blob-motion {
+    position: absolute;
+    z-index: 1;
+    transform: translateX(-10%) translateY(-5%);
+
+    #visual {
+      width: 100%;
+    }
+  }
 }
 
 .wave1 {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 
 .wave1 svg {
-    z-index: 2;
-    position: relative;
-    display: block;
-    width: calc(111% + 1.3px);
-    height: 60px;
+  z-index: 2;
+  position: relative;
+  display: block;
+  width: calc(111% + 1.3px);
+  height: 60px;
 }
 
 .wave1 .shape-fill {
-    fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 main {
-    background-color: $light-gray;
-    min-height: 100vh;
-    text-align: center;
-    font-family: 'Karma', serif;
-    z-index: 2;
+  background-color: $light-gray;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "Karma", serif;
+  z-index: 2;
 
+  h1 {
+    margin: 3em 0 2em 0;
+    color: $dark-blue;
+  }
 
-    h1 {
-        margin-top: 3em;
-        color: $dark-blue;
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  .grid-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+
+  .webpages {
+    list-style: none;
+
+    li {
+      a {
+        font-size: 1.2em;
+        line-height: 1.5em;
+        font-weight: 500;
+        text-decoration: none;
+        color: $dark-grey;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
     }
-
-    h2 {
-        margin-bottom: 1em;
-    }
-
-    .webpages {
-        list-style: none;
-
-        li {
-            a {
-                font-size: 1.2em;
-                line-height: 1.5em;
-                font-weight: 500;
-                text-decoration: none;
-                color: $dark-grey;
-            }
-
-            a:hover {
-                text-decoration: underline;
-            }
-        }
-    }
+  }
 }
 
 .wave2 {
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .wave2 svg {
-    position: relative;
-    display: block;
-    width: calc(124% + 1.3px);
-    height: 51px;
-    transform: rotateY(180deg);
+  position: relative;
+  display: block;
+  width: calc(124% + 1.3px);
+  height: 51px;
+  transform: rotateY(180deg);
 }
 
 .wave2 .shape-fill {
-    fill: #D9D9D9;
+  fill: #d9d9d9;
 }
 
 footer {
-    min-height: 100vh;
-    background-color: $dark-blue;
+  min-height: 100vh;
+  background-color: $dark-blue;
 
-    .content-footer {
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Karma', serif;
-        color: $light-gray;
-        gap: 1em;
+  .content-footer {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Karma", serif;
+    color: $light-gray;
+    gap: 1em;
+  }
+
+  .head-of-contact {
+    text-align: center;
+
+    h1 {
+      font-size: 2.5em;
     }
 
-    .head-of-contact {
-        text-align: center;
+    h2 {
+      font-size: 2em;
+    }
+  }
 
-        h1 {
-            font-size: 2.5em;
-        }
-
-        h2 {
-            font-size: 2em;
-        }
+  .contact-links {
+    a {
+      color: $light-gray;
+      font-size: 2.2em;
+      margin: 0.2em;
+      transition: 0.3s ease;
     }
 
-    .contact-links {
-        a {
-            color: $light-gray;
-            font-size: 2.2em;
-            margin: 0.2em;
-            transition: 0.3s ease;
-        }
-
-        a:hover {
-            color: $white;
-        }
+    a:hover {
+      color: $white;
     }
+  }
 
-    .final-message {
-        margin-top: 3em;
-        font-size: 2em;
-    }
+  .final-message {
+    margin-top: 3em;
+    font-size: 2em;
+  }
 }
 
 .wave3 {
-    height: 30vh;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  height: 30vh;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .wave3 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 52px;
-    transform: rotateY(180deg);
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 52px;
+  transform: rotateY(180deg);
 }
 
 .wave3 .shape-fill {
-    fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 @media screen and (max-width: 840px) {
-    header {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1px 1fr;
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1px 1fr;
 
-        .middle-bar {
-            border-top: 1px solid black;
-            justify-self: center;
-            width: 60%;
-            margin-bottom: 2em;
-        }
+    .middle-bar {
+      border-top: 1px solid black;
+      justify-self: center;
+      width: 60%;
+      margin-bottom: 2em;
     }
+  }
 }
 
-@media screen and (max-width:560px) {
-    nav {
-        .nav-title {
-            font-size: 1.3em;
-        }
-
-        ul {
-            font-size: 1em;
-        }
+@media screen and (max-width: 560px) {
+  nav {
+    .nav-title {
+      font-size: 1.3em;
     }
 
-    header {
-        .img-div {
-            margin-bottom: unset;
-            img {
-                width: 18em;
-                border-radius: 50%;
-            }
-        }
-        .content-div {
-            h1 {
-                font-size: 2.1em;
-            }
-        }
-        .blob-motion {
-            visibility: hidden;
-        }
+    ul {
+      font-size: 1em;
     }
-    footer {
-        .head-of-contact {
-            h1 {
-                font-size: 2em;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-        }
+  }
+
+  header {
+    .img-div {
+      margin-bottom: unset;
+      img {
+        width: 18em;
+        border-radius: 50%;
+      }
     }
+    .content-div {
+      h1 {
+        font-size: 2.1em;
+      }
+    }
+    .blob-motion {
+      visibility: hidden;
+    }
+  }
+  footer {
+    .head-of-contact {
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  }
 }
