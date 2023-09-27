@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 4em;
+  gap: 2em;
+  max-width: 1300px;
+}
+
+.card {
+  padding: 2em;
+  border-radius: 0.5em;
+}
+.card .card-head {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.card .card-head .status {
+  opacity: 0.5;
+}
+.card .card-head img {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+}
+.card .card-title {
+  font-size: 1.4em;
+  margin: 1em 0 1em 0;
+}
+.card .card-description {
+  opacity: 0.7;
+}
+
+.border-violet {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+
+.pale {
+  border-color: hsl(263, 46%, 57%);
+}
+
+.dark {
+  color: hsl(0, 0%, 100%);
+}
+
+.card:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 85% 0%;
+}
+
+.card:nth-child(2) {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.card:nth-child(3),
+:nth-child(5) {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+
+.card:nth-child(4) {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: hsl(219, 29%, 14%);
+}
+
+.card:nth-child(5) {
+  order: 3;
+  grid-column-start: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+footer {
+  font-size: 1em;
+  text-align: center;
+  margin: 1em;
+}
+
+footer a {
+  color: hsl(263, 55%, 52%);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1150px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 3em 1em 1em 1em;
+    gap: 1em;
+  }
+  .card:nth-child(1) {
+    grid-column-end: unset;
+  }
+  .card:nth-child(4) {
+    grid-column-start: unset;
+    grid-column-end: unset;
+  }
+  .card:nth-child(5) {
+    grid-column-start: unset;
+    grid-row-start: unset;
+    grid-row-end: unset;
+  }
+}/*# sourceMappingURL=style.css.map */
