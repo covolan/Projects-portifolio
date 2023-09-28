@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main>
+      <!-- Rating state start -->
+      <div class="rating-state" id="rating-state">
+        <img src="./images/icon-star.svg" alt="A icon of a star shape" />
+
+        <h1>How did we do?</h1>
+
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+
+        <form id="form" action="./index.html">
+          <div class="rating-numbers">
+            <span id="1">1</span> <span id="2">2</span> <span id="3">3</span>
+            <span id="4">4</span>
+            <span id="5">5</span>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="thank-state" id="thank-state">
+        <img src="./images/illustration-thank-you.svg" alt="" />
+
+        <p class="selected" id="selected">
+          You selected <span id="number"></span> out of 5
+        </p>
+
+        <h2>Thank you!</h2>
+
+        <p class="info">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        aria-label="Learn more about the challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.frontendmentor.io/profile/covolan"
+        aria-label="Check my frontend mentor profile"
+        target="_blank"
+        >Covolan</a
+      >.
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

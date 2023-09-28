@@ -19,7 +19,11 @@ If you want to view each project, just hop into my repo [page](https://covolan.g
 - Order summary [directory](./order-summary-component-main/);
 - Four card feature [directory](./four-card-feature-section-master/);
 - Faq accordion card [diretory](./faq-accordion-card-main/) (Being worked on);
+- interactive rating component [directory](./interactive-rating-component-main/);
 
+### Junior:
+
+- ping comming soon [diretory](./ping-coming-soon-page-master/);
 ---
 
 **Note: I'm not a native english speaker, so forgive-me for any misspellings**
