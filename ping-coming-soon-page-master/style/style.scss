@@ -71,8 +71,10 @@ main {
       border-radius: 2em;
     }
     input {
-      border: 1px solid $blue;
-      opacity: 0.5;
+      border: 1px solid $pale-blue;
+    }
+    input::placeholder {
+      color: $pale-blue;
     }
     button {
       border: none;
@@ -92,7 +94,7 @@ main {
       text-align: left;
       margin-left: 2em;
       font-size: 0.9em;
-      color: red;
+      color: $light-red;
       display: none;
     }
   }
