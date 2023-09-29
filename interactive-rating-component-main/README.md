@@ -20,8 +20,8 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/covolan/frontend-mentor1/edit/main/interactive-rating-component-main/)
+- Live Site URL: [GitHub-pages](https://covolan.github.io/frontend-mentor1/interactive-rating-component-main/)
 
 ## My process
 
