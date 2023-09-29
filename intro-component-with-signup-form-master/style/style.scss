@@ -13,6 +13,12 @@ $dark-blue: hsl(249, 10%, 26%);
 $grayish-blue: hsl(246, 25%, 77%);
 $box-shadow-div: 0px 6px 0px hsla(0, 0%, 0%, 0.253);
 
+@mixin centerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,9 +28,7 @@ $box-shadow-div: 0px 6px 0px hsla(0, 0%, 0%, 0.253);
 body {
   font-family: "Poppins", sans-serif;
   min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include centerContent;
   align-items: center;
   background: url(../images/bg-intro-desktop.png);
   background-color: $red;
@@ -38,9 +42,7 @@ main {
 }
 
 .product {
-  display: flex;  
-  flex-direction: column;
-  justify-content: center;
+  @include centerContent;
   max-width: 600px;
     padding: 2em;
   h1 {
@@ -51,7 +53,7 @@ main {
 }
 
 .form-div {
-    max-width: 600px;
+    max-width: 550px;
     padding: 2em;
     .top-card {
       h2 {
@@ -61,35 +63,84 @@ main {
         background-color: $blue;
         border-radius: 0.5em;
         box-shadow: $box-shadow-div;
+        font-weight: 400;
+      }
+      span {
+        font-weight: 700;
       }
       margin-bottom: 1.5em;
     }
     .bottom-card {
       border-radius: 0.5em;
       background-color: white;
-      padding: 2em;
+      padding: 1em 2em 2em 2em;
       box-shadow: $box-shadow-div;
-      p {
-        margin-top: 1em;
+      .terms-p {
+        margin-top: 1.4em;
         color: $grayish-blue;
         text-align: center;
-        font-size: 0.8em;
+        font-size: 0.7em;
+        font-weight: 600;
+        a {
+          text-decoration: none;
+          color: $red;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
 }
 
 form {
   display: flex;
-  flex-direction: column; 
-  gap: 1em;
+  flex-direction: column;
+  img {
+    align-self: center;
+    width: 20px;
+    position: absolute;
+    margin-right: 0.7em;
+    margin-top: 1.2em;
+    z-index: 1;
+    display: none;
+  }
+  div {
+    justify-content: flex-end;
+    display: flex;
+  }
+  .error {
+    color: $red;
+    font-size: 0.8em;
+    text-align: right;
+    display: none;
+  }
   input {
+    display: inline-block;
     padding: 1em;
     border: 1px solid $grayish-blue;
     border-radius: 0.5em;
+    width: 100%;
+    margin-top: 1.5em;
+    &:focus {
+      outline: none;
+      border: 1px solid $blue;
+    }
   }
   button {
     padding: 1em;
     text-transform: uppercase;
+    border: none;
+    margin-top: 1.5em;
+    border-radius: 0.5em;
+    background-color: $green;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 3px 0 hsla(154, 57%, 33%, 0.712);
+    transition: 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: hsl(154, 71%, 57%);
+    }
   }
 }
 
@@ -99,4 +150,23 @@ form {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    margin: unset;
+  }
+  .product {
+    max-width: unset;
+    text-align: center;
+    padding: 1.5em;
+    h1 {
+      font-size: 2em;
+    }
+  }
+  .form-div {
+    max-width: unset;
+    padding: 1.5em;
+  }
 }

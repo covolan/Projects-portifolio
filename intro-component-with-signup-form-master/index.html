@@ -11,7 +11,6 @@
     />
     <link rel="stylesheet" href="./style/style.css" />
     <title>Frontend Mentor | Intro component with sign up form</title>
-
   </head>
   <body>
     <main>
@@ -30,15 +29,47 @@
         </div>
 
         <div class="bottom-card">
-          <form action="/intro-component-with-signup-form-master/index.html">
-            <input type="text" id="first-name" placeholder="First Name" />
-            <input type="text" id="last-name" placeholder="Last Name" />
-            <input type="email" id="email" placeholder="Email Address" />
-            <input type="password" id="password" placeholder="Password" />
+          <form action="/intro-component-with-signup-form-master/index.html" id="form">
+            <div>
+              <img
+                id="ericon-first-name"
+                src="./images/icon-error.svg"
+                alt="A icon of a exclamation point error"
+              /><input type="text" id="first-name" placeholder="First Name" />
+            </div>
+            <p class="error" id="first-name-error"><em>First name cannot be empty</em></p>
+            <div>
+              <img
+              id="ericon-last-name"
+                src="./images/icon-error.svg"
+                alt="A icon of a exclamation point error"
+              />
+              <input type="text" id="last-name" placeholder="Last Name" />
+            </div>
+            <p class="error" id="last-name-error"><em>Last name cannot be empty</em></p>
+            <div>
+              <img
+              id="ericon-email"
+                src="./images/icon-error.svg"
+                alt="A icon of a exclamation point error"
+              />
+              <input type="email" id="email" placeholder="Email Address" />
+            </div>
+            <p class="error" id="email-error"><em>Looks like this is not an email</em></p>
+            <div>
+              <img
+                id="ericon-pwr"
+                src="./images/icon-error.svg"
+                alt="A icon of a exclamation point error"
+              />
+              <input type="password" id="password" placeholder="Password" />
+            </div>
+            <p class="error" id="pwr-error"><em>Password cannot be empty</em></p>
             <button type="submit" id="submit-btn">Claim your free trial</button>
           </form>
-          <p>
-            By clicking the button, you are agreeing to our Terms and Services
+          <p class="terms-p">
+            By clicking the button, you are agreeing to our
+            <a href="#">Terms and Services</a>
           </p>
         </div>
       </div>
@@ -50,5 +81,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+  <script src="script.js"></script>
   </body>
 </html>

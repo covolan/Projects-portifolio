@@ -37,7 +37,7 @@ main {
 }
 
 .form-div {
-  max-width: 600px;
+  max-width: 550px;
   padding: 2em;
 }
 .form-div .top-card {
@@ -50,33 +50,82 @@ main {
   background-color: hsl(248, 32%, 49%);
   border-radius: 0.5em;
   box-shadow: 0px 6px 0px hsla(0, 0%, 0%, 0.253);
+  font-weight: 400;
+}
+.form-div .top-card span {
+  font-weight: 700;
 }
 .form-div .bottom-card {
   border-radius: 0.5em;
   background-color: white;
-  padding: 2em;
+  padding: 1em 2em 2em 2em;
   box-shadow: 0px 6px 0px hsla(0, 0%, 0%, 0.253);
 }
-.form-div .bottom-card p {
-  margin-top: 1em;
+.form-div .bottom-card .terms-p {
+  margin-top: 1.4em;
   color: hsl(246, 25%, 77%);
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+.form-div .bottom-card .terms-p a {
+  text-decoration: none;
+  color: hsl(0, 100%, 74%);
+}
+.form-div .bottom-card .terms-p a:hover {
+  text-decoration: underline;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+}
+form img {
+  align-self: center;
+  width: 20px;
+  position: absolute;
+  margin-right: 0.7em;
+  margin-top: 1.2em;
+  z-index: 1;
+  display: none;
+}
+form div {
+  justify-content: flex-end;
+  display: flex;
+}
+form .error {
+  color: hsl(0, 100%, 74%);
+  font-size: 0.8em;
+  text-align: right;
+  display: none;
 }
 form input {
+  display: inline-block;
   padding: 1em;
   border: 1px solid hsl(246, 25%, 77%);
   border-radius: 0.5em;
+  width: 100%;
+  margin-top: 1.5em;
+}
+form input:focus {
+  outline: none;
+  border: 1px solid hsl(248, 32%, 49%);
 }
 form button {
   padding: 1em;
   text-transform: uppercase;
+  border: none;
+  margin-top: 1.5em;
+  border-radius: 0.5em;
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 3px 0 hsla(154, 57%, 33%, 0.712);
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: hsl(154, 71%, 57%);
 }
 
 .attribution {
@@ -86,4 +135,23 @@ form button {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    margin: unset;
+  }
+  .product {
+    max-width: unset;
+    text-align: center;
+    padding: 1.5em;
+  }
+  .product h1 {
+    font-size: 2em;
+  }
+  .form-div {
+    max-width: unset;
+    padding: 1.5em;
+  }
 }/*# sourceMappingURL=style.css.map */
