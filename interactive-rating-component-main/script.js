@@ -12,103 +12,59 @@ const number = document.getElementById("number");
 
 let clicked = [];
 
-btn1.addEventListener("click", (event) => {
+function btnEvent(btn, btnNumber) {
+  btn.addEventListener("click", () => {
     if (clicked.length == 0) {
-        btn1.style.backgroundColor = "hsl(25, 97%, 53%)";
-        btn1.style.color = "white";
-        clicked.push("btn1");
+      btn.style.backgroundColor = "hsl(25, 97%, 53%)";
+      btn.style.color = "white";
+      clicked.push(btnNumber);
     } else {
-        clearButton(clicked[0]);
-        btn1.style.backgroundColor = "hsl(25, 97%, 53%)";
-        btn1.style.color = "white";
-        clicked.push("btn1");
+      clearButton(clicked[0]);
+      btn.style.backgroundColor = "hsl(25, 97%, 53%)";
+      btn.style.color = "white";
+      clicked.push(btnNumber);
     }
-})
-
-btn2.addEventListener("click", (event) => {
-    if (clicked.length == 0) {
-        btn2.style.backgroundColor = "hsl(25, 97%, 53%)";
-        btn2.style.color = "white";
-        clicked.push("btn2");
-    } else {
-        clearButton(clicked[0]);
-        btn2.style.backgroundColor = "hsl(25, 97%, 53%)";
-        btn2.style.color = "white";
-        clicked.push("btn2");
-    }
-})
-
-btn3.addEventListener("click", (event) => {
-    if (clicked.length == 0) {
-        btn3.style.backgroundColor = "hsl(25, 97%, 53%)";
-        btn3.style.color = "white";
-        clicked.push("btn3");
-    } else {
-        clearButton(clicked[0]);
-        btn3.style.backgroundColor = "hsl(25, 97%, 53%)";
-        btn3.style.color = "white";
-        clicked.push("btn3");
-    }
-})
-
-btn4.addEventListener("click", (event) => {
-    if (clicked.length == 0) {
-        btn4.style.backgroundColor = "hsl(25, 97%, 53%)";
-        btn4.style.color = "white";
-        clicked.push("btn4");
-    } else {
-        clearButton(clicked[0]);
-        btn4.style.backgroundColor = "hsl(25, 97%, 53%)";
-        btn4.style.color = "white";
-        clicked.push("btn4");
-    }
-})
-
-btn5.addEventListener("click", (event) => {
-    if (clicked.length == 0) {
-        btn5.style.backgroundColor = "hsl(25, 97%, 53%)";
-        btn5.style.color = "white";
-        clicked.push("btn5");
-    } else {
-        clearButton(clicked[0]);
-        btn5.style.backgroundColor = "hsl(25, 97%, 53%)";
-        btn5.style.color = "white";
-        clicked.push("btn5");
-    }
-})
+  });
+}
 
 form.addEventListener("submit", (event) => {
-    rating.style.display = "none";
-    thank.style.display = "flex";
-    event.preventDefault();
-    if (clicked.length == 0) {
-        number.innerHTML += '0';
-    } else {
-        number.innerHTML += clicked[0][3];
-    }
-})
+  rating.style.display = "none";
+  thank.style.display = "flex";
+  event.preventDefault();
+  if (clicked.length == 0) {
+    number.innerHTML += "0";
+  } else {
+    number.innerHTML += clicked[0][3];
+  }
+});
 
 function clearButton(btn) {
-    switch(btn) {
-        case "btn1":
-            btn1.style.backgroundColor = "hsla(212, 20%, 37%, 0.26)";
-            btn1.style.color = "hsl(217, 12%, 63%)";
-            clicked.pop();
-        case "btn2":
-            btn2.style.backgroundColor = "hsla(212, 20%, 37%, 0.26)";
-            btn2.style.color = "hsl(217, 12%, 63%)";
-            clicked.pop();
-        case "btn3":
-            btn3.style.backgroundColor = "hsla(212, 20%, 37%, 0.26)";
-            btn3.style.color = "hsl(217, 12%, 63%)";
-            clicked.pop();
-        case "btn4":
-            btn4.style.backgroundColor = "hsla(212, 20%, 37%, 0.26)";
-            btn4.style.color = "hsl(217, 12%, 63%)";
-            clicked.pop();
-        case "btn5":
-            btn5.style.backgroundColor = "hsla(212, 20%, 37%, 0.26)";
-            btn5.style.color = "hsl(217, 12%, 63%)";
-            clicked.pop();
-    }
+  switch (btn) {
+    case "btn1":
+      btn1.style.backgroundColor = "hsla(212, 20%, 37%, 0.26)";
+      btn1.style.color = "hsl(217, 12%, 63%)";
+      clicked.pop();
+    case "btn2":
+      btn2.style.backgroundColor = "hsla(212, 20%, 37%, 0.26)";
+      btn2.style.color = "hsl(217, 12%, 63%)";
+      clicked.pop();
+    case "btn3":
+      btn3.style.backgroundColor = "hsla(212, 20%, 37%, 0.26)";
+      btn3.style.color = "hsl(217, 12%, 63%)";
+      clicked.pop();
+    case "btn4":
+      btn4.style.backgroundColor = "hsla(212, 20%, 37%, 0.26)";
+      btn4.style.color = "hsl(217, 12%, 63%)";
+      clicked.pop();
+    case "btn5":
+      btn5.style.backgroundColor = "hsla(212, 20%, 37%, 0.26)";
+      btn5.style.color = "hsl(217, 12%, 63%)";
+      clicked.pop();
+  }
 }
+
+btnEvent(btn1, "btn1");
+btnEvent(btn2, "btn2");
+btnEvent(btn3, "btn3");
+btnEvent(btn4, "btn4");
+btnEvent(btn5, "btn5");
