@@ -92,6 +92,14 @@ main {
     }
 }
 
+.hidden-element {
+  display: none;
+}
+
+.red-border {
+  border: 1px solid $red;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -102,7 +110,7 @@ form {
     margin-right: 0.7em;
     margin-top: 1.2em;
     z-index: 1;
-    display: none;
+
   }
   div {
     justify-content: flex-end;
@@ -112,7 +120,7 @@ form {
     color: $red;
     font-size: 0.8em;
     text-align: right;
-    display: none;
+
   }
   input {
     display: inline-block;
