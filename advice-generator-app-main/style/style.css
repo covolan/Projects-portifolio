@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  background-color: hsl(218, 23%, 16%);
+}
+
+main {
+  max-width: 550px;
+  background-color: hsl(217, 19%, 24%);
+  color: hsl(193, 38%, 86%);
+  padding: 2em;
+  text-align: center;
+  border-radius: 1em;
+  margin: 1em;
+}
+main .ad__number {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  margin-bottom: 1em;
+  color: hsl(150, 100%, 66%);
+}
+main .advice__box {
+  font-size: 28px;
+  margin-bottom: 1em;
+}
+main button {
+  cursor: pointer;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsl(150, 100%, 66%);
+  transition: 0.2s ease;
+  position: absolute;
+  margin: 0.5em 0 0 -2em;
+}
+main button img {
+  scale: 0.9;
+  transition: 0.4s ease;
+}
+main button img:hover {
+  transform: rotate(180deg);
+}
+main button:hover {
+  box-shadow: 0 0 25px hsl(150, 100%, 66%);
+}
+
+.divider__desktop {
+  margin: 0 auto 2em;
+  width: 100%;
+}
+
+.divider__mobile {
+  margin: 0 auto 2em;
+  display: none;
+  width: 100%;
+}
+
+footer {
+  margin: 2em 1em 1em 1em;
+  color: hsl(193, 38%, 86%);
+}
+footer a {
+  color: hsl(150, 100%, 66%);
+}
+footer a:hover {
+  color: hsl(193, 38%, 86%);
+}
+
+@media screen and (max-width: 500px) {
+  .divider__desktop {
+    display: none;
+  }
+  .divider__mobile {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
