@@ -21,8 +21,8 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/covolan/frontend-mentor1/edit/main/social-media-dashboard-with-theme-switcher-master/)
+- Live Site URL: [Page](https://covolan.github.io/frontend-mentor1/social-media-dashboard-with-theme-switcher-master/)
 
 ## My process
 
