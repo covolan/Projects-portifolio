@@ -6,11 +6,7 @@ const main = document.querySelector("body");
 const modeName = document.querySelector(".mode__switcher");
 const slider = document.getElementById("slider");
 
-
-
 let switched = false;
-
-console.log(header)
 
 button.addEventListener("click", (event) => {
     if(!switched) {
