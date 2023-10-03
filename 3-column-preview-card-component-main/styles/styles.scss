@@ -70,7 +70,7 @@ body {
     border-radius: 25px;
     transition: ease-in-out 0.3s;
 
-    :hover {
+    &:hover {
         background-color: $transparent-white;
         cursor: pointer;
     }
