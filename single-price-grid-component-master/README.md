@@ -24,7 +24,7 @@ This is a solution to the [Single price grid component challenge on Frontend Men
 ### Links
 
 - Solution URL: [GitHub](https://github.com/covolan/frontend-mentor/edit/main/single-price-grid-component-master/)
-- Live Site URL: [Webpage](https://single-price-grid-covolan.vercel.app/)
+- Live Site URL: [Page](https://covolan.github.io/frontend-mentor1/single-price-grid-component-master/index.html)
 
 ## My process
 
