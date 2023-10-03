@@ -13,6 +13,23 @@ $dark-blue: #284b63;
   scroll-behavior: smooth;
 }
 
+// ANIMATION ON VIEW
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+// NAVBAR STYLE
+
 nav {
   width: 100%;
   height: 60px;
@@ -49,10 +66,10 @@ nav {
       padding: 0.2em 0.5em;
       border-radius: 0.2em;
       transition: 0.3s ease-in-out;
-    }
 
-    a:hover {
-      background-color: $white;
+      &:hover {
+        background-color: $white;
+      }
     }
   }
 }
@@ -89,6 +106,7 @@ header {
     align-self: center;
     margin-bottom: 2em;
     z-index: 2;
+    transition-delay: 200ms;
   }
 
   .content-div {
@@ -97,6 +115,7 @@ header {
     text-align: center;
     margin: 4em 2em 8em 2em;
     z-index: 2;
+    transition-delay: 400ms;
 
     h1 {
       font-size: 2.5em;
@@ -114,10 +133,9 @@ header {
       text-decoration: none;
       color: black;
       font-weight: 700;
-    }
-
-    .emphasis:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -131,6 +149,8 @@ header {
     }
   }
 }
+
+// WAVE TRANSITION
 
 .wave1 {
   width: 100%;
@@ -148,6 +168,46 @@ header {
 .wave1 .shape-fill {
   fill: #ffffff;
 }
+
+.wave2 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave2 svg {
+  position: relative;
+  display: block;
+  width: calc(124% + 1.3px);
+  height: 51px;
+  transform: rotateY(180deg);
+}
+
+.wave2 .shape-fill {
+  fill: #d9d9d9;
+}
+
+.wave3 {
+  height: 30vh;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave3 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 52px;
+  transform: rotateY(180deg);
+}
+
+.wave3 .shape-fill {
+  fill: #ffffff;
+}
+
+// MAIN CONTENT CHALLENGES
 
 main {
   background-color: $light-gray;
@@ -171,45 +231,53 @@ main {
   .grid-div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
   }
-  
+
+  .newbie {
+    transition-delay: 200ms;
+  }
+
+  .junior {
+    transition-delay: 400ms;
+  }
 
   .webpages {
     list-style: none;
-
+    background-color: #3c6e711f;
+    padding: 1em;
+    transition: 0.3s ease;
+    border-radius: 0.5em;
+    box-shadow: 0 8px 10px #284b6365;
+    &:hover {
+      background-color: #74a4a71f;
+    }
     li {
       a {
         font-size: 1.2em;
-        line-height: 1.5em;
+        line-height: 1.8em;
         font-weight: 500;
         text-decoration: none;
         color: $dark-grey;
-      }
-
-      a:hover {
-        text-decoration: underline;
+        transition: 0.3s ease;
+        &:hover {
+          text-decoration: underline;
+          font-size: 1.3em;
+        }
       }
     }
   }
 }
 
-.wave2 {
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
+.newbie__card {
+  border-top: 0.4em solid #6abecd;
 }
 
-.wave2 svg {
-  position: relative;
-  display: block;
-  width: calc(124% + 1.3px);
-  height: 51px;
-  transform: rotateY(180deg);
+.junior__card {
+  border-top: 0.4em solid #aad742;
 }
 
-.wave2 .shape-fill {
-  fill: #d9d9d9;
-}
+// FOOTER LINKS
 
 footer {
   min-height: 100vh;
@@ -243,11 +311,11 @@ footer {
       color: $light-gray;
       font-size: 2.2em;
       margin: 0.2em;
-      transition: 0.3s ease;
-    }
-
-    a:hover {
-      color: $white;
+      transition: 0.2s ease;
+      &:hover {
+        color: $white;
+        font-size: 2.6em;
+      }
     }
   }
 
@@ -257,25 +325,7 @@ footer {
   }
 }
 
-.wave3 {
-  height: 30vh;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.wave3 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 52px;
-  transform: rotateY(180deg);
-}
-
-.wave3 .shape-fill {
-  fill: #ffffff;
-}
+// MEDIA RESPONSIVENESS
 
 @media screen and (max-width: 840px) {
   header {
@@ -299,6 +349,15 @@ footer {
 
     ul {
       font-size: 1em;
+    }
+  }
+
+  main {
+    .grid-div {
+      grid-template-columns: 1fr;
+    }
+    .webpages {
+      margin-bottom: 2em;
     }
   }
 

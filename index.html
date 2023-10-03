@@ -26,10 +26,10 @@
 
     <header id="home">
       <div class="img-div">
-        <img src="./assets/prof_pic_70kb.jpeg" alt="" />
+        <img class="hidden" src="./assets/prof_pic_70kb.jpeg" alt="" />
       </div>
-      <div class="middle-bar"></div>
-      <div class="content-div">
+      <div class="middle-bar hidden"></div>
+      <div class="content-div hidden">
         <h1>Hello everyone!</h1>
         <p>
           This is the page to host my Frontend Mentor projects. My name is
@@ -107,86 +107,120 @@
         </svg>
       </div>
 
-      <h1 class="pages-title">Those are my finished challenges</h1>
+      <h1 class="pages-title hidden">Those are my finished challenges</h1>
       <div class="grid-div">
-        <div class="newbie">
+        <div class="newbie hidden">
           <h2 class="difficulty">Newbie:</h2>
-          <ul class="webpages">
+          <ul class="webpages newbie__card">
             <li>
-              <a href="./qr-code-component-main/index.html">Qr-code landing </a>
+              <a href="./qr-code-component-main/index.html" target="_blank"
+                >Qr-code landing
+              </a>
             </li>
             <li>
-              <a href="./3-column-preview-card-component-main/index.html">
+              <a
+                href="./3-column-preview-card-component-main/index.html"
+                target="_blank"
+              >
                 3 Column preview card
               </a>
             </li>
             <li>
-              <a href="./single-price-grid-component-master/index.html">
+              <a
+                href="./single-price-grid-component-master/index.html"
+                target="_blank"
+              >
                 Single price grid
               </a>
             </li>
             <li>
-              <a href="./social-proof-section-master/index.html">
+              <a
+                href="./social-proof-section-master/index.html"
+                target="_blank"
+              >
                 Social proof section
               </a>
             </li>
             <li>
-              <a href="./stats-preview-card-component-main/index.html">
+              <a
+                href="./stats-preview-card-component-main/index.html"
+                target="_blank"
+              >
                 Stats preview card
               </a>
             </li>
             <li>
-              <a href="./product-preview-card-component-main/index.html">
+              <a
+                href="./product-preview-card-component-main/index.html"
+                target="_blank"
+              >
                 Product preview card
               </a>
             </li>
             <li>
-              <a href="./order-summary-component-main/index.html">
+              <a
+                href="./order-summary-component-main/index.html"
+                target="_blank"
+              >
                 Order summary
               </a>
             </li>
             <li>
-              <a href="./four-card-feature-section-master/index.html">
+              <a
+                href="./four-card-feature-section-master/index.html"
+                target="_blank"
+              >
                 Four card feature
               </a>
             </li>
             <li>
-              <a href="./faq-accordion-card-main/index.html">
+              <a href="./faq-accordion-card-main/index.html" target="_blank">
                 Faq accordion card (being worked on)
               </a>
             </li>
             <li>
-              <a href="./ping-coming-soon-page-master/index.html">
+              <a
+                href="./ping-coming-soon-page-master/index.html"
+                target="_blank"
+              >
                 Ping comming soon
-              </a>  
+              </a>
             </li>
             <li>
-              <a href="./interactive-rating-component-main/">
+              <a href="./interactive-rating-component-main/" target="_blank">
                 Interactive rating component
-              </a>  
+              </a>
             </li>
             <li>
-              <a href="./intro-component-with-signup-form-master/index.html">
+              <a
+                href="./intro-component-with-signup-form-master/index.html"
+                target="_blank"
+              >
                 Intro component with singup form
-              </a>  
+              </a>
             </li>
           </ul>
         </div>
-        <div class="junior">
+        <div class="junior hidden">
           <h2>Junior:</h2>
-          <ul class="webpages">
+          <ul class="webpages junior__card">
             <li>
-              <a href="./testimonials-grid-section-main/">Testimonials grid</a>
+              <a href="./testimonials-grid-section-main/" target="_blank"
+                >Testimonials grid</a
+              >
             </li>
             <li>
-              <a href="./advice-generator-app-main/">
+              <a href="./advice-generator-app-main/" target="_blank">
                 Advice generator app
-              </a>  
+              </a>
             </li>
             <li>
-              <a href="./social-media-dashboard-with-theme-switcher-master/">
+              <a
+                href="./social-media-dashboard-with-theme-switcher-master/"
+                target="_blank"
+              >
                 Social media dashboard
-              </a>  
+              </a>
             </li>
           </ul>
         </div>
@@ -218,12 +252,12 @@
       </div>
 
       <div class="content-footer">
-        <div class="head-of-contact">
+        <div class="head-of-contact hidden">
           <h1>Get in thouch with me!</h1>
           <h2>Pick your coffee:</h2>
         </div>
 
-        <div class="contact-links">
+        <div class="contact-links hidden">
           <a href="https://www.freecodecamp.org/Covolan" target="_blank"
             ><i class="fa-brands fa-free-code-camp"></i
           ></a>
@@ -243,8 +277,11 @@
           <a href="mailto:covolan09@gmail.com" target="_blank"
             ><i class="fa-brands fa-google"></i
           ></a>
+          <a href="https://github.com/covolan" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
         </div>
-        <h2 class="final-message">Thanks for visiting!</h2>
+        <h2 class="final-message hidden">Thanks for visiting!</h2>
       </div>
 
       <div class="wave3">
@@ -271,19 +308,11 @@
         </svg>
       </div>
     </footer>
-    <script>
-      const tween = KUTE.fromTo(
-        "#blob1",
-        { path: "#blob1" },
-        { path: "#blob2" },
-        { repeat: 9999, duration: 2000, yoyo: true }
-      );
-
-      tween.start();
-    </script>
+    <script src="./scripts/blobAnimation.js"></script>
     <script
       src="https://kit.fontawesome.com/cbff97fc6c.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/showAnimation.js"></script>
   </body>
 </html>

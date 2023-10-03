@@ -6,6 +6,19 @@
   scroll-behavior: smooth;
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 nav {
   width: 100%;
   height: 60px;
@@ -76,6 +89,7 @@ header .middle-bar {
   align-self: center;
   margin-bottom: 2em;
   z-index: 2;
+  transition-delay: 200ms;
 }
 header .content-div {
   align-self: center;
@@ -83,6 +97,7 @@ header .content-div {
   text-align: center;
   margin: 4em 2em 8em 2em;
   z-index: 2;
+  transition-delay: 400ms;
 }
 header .content-div h1 {
   font-size: 2.5em;
@@ -128,6 +143,44 @@ header .blob-motion #visual {
   fill: #ffffff;
 }
 
+.wave2 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave2 svg {
+  position: relative;
+  display: block;
+  width: calc(124% + 1.3px);
+  height: 51px;
+  transform: rotateY(180deg);
+}
+
+.wave2 .shape-fill {
+  fill: #d9d9d9;
+}
+
+.wave3 {
+  height: 30vh;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave3 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 52px;
+  transform: rotateY(180deg);
+}
+
+.wave3 .shape-fill {
+  fill: #ffffff;
+}
+
 main {
   background-color: #d9d9d9;
   min-height: 100vh;
@@ -148,37 +201,44 @@ main h2 {
 main .grid-div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+main .newbie {
+  transition-delay: 200ms;
+}
+main .junior {
+  transition-delay: 400ms;
 }
 main .webpages {
   list-style: none;
+  background-color: rgba(60, 110, 113, 0.1215686275);
+  padding: 1em;
+  transition: 0.3s ease;
+  border-radius: 0.5em;
+  box-shadow: 0 8px 10px rgba(40, 75, 99, 0.3960784314);
+}
+main .webpages:hover {
+  background-color: rgba(116, 164, 167, 0.1215686275);
 }
 main .webpages li a {
   font-size: 1.2em;
-  line-height: 1.5em;
+  line-height: 1.8em;
   font-weight: 500;
   text-decoration: none;
   color: #353535;
+  transition: 0.3s ease;
 }
 main .webpages li a:hover {
   text-decoration: underline;
+  font-size: 1.3em;
 }
 
-.wave2 {
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
+.newbie__card {
+  border-top: 0.4em solid #6abecd;
 }
 
-.wave2 svg {
-  position: relative;
-  display: block;
-  width: calc(124% + 1.3px);
-  height: 51px;
-  transform: rotateY(180deg);
-}
-
-.wave2 .shape-fill {
-  fill: #d9d9d9;
+.junior__card {
+  border-top: 0.4em solid #aad742;
 }
 
 footer {
@@ -208,34 +268,15 @@ footer .contact-links a {
   color: #d9d9d9;
   font-size: 2.2em;
   margin: 0.2em;
-  transition: 0.3s ease;
+  transition: 0.2s ease;
 }
 footer .contact-links a:hover {
   color: #ffffff;
+  font-size: 2.6em;
 }
 footer .final-message {
   margin-top: 3em;
   font-size: 2em;
-}
-
-.wave3 {
-  height: 30vh;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.wave3 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 52px;
-  transform: rotateY(180deg);
-}
-
-.wave3 .shape-fill {
-  fill: #ffffff;
 }
 
 @media screen and (max-width: 840px) {
@@ -256,6 +297,12 @@ footer .final-message {
   }
   nav ul {
     font-size: 1em;
+  }
+  main .grid-div {
+    grid-template-columns: 1fr;
+  }
+  main .webpages {
+    margin-bottom: 2em;
   }
   header .img-div {
     margin-bottom: unset;
