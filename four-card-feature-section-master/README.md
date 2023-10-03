@@ -22,7 +22,7 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 ### Links
 
 - Solution URL: [GitHub](https://github.com/covolan/frontend-mentor3/tree/main/four-card-feature-section-master)
-- Live Site URL: [Vercel](https://four-card-feature-covolan.vercel.app/)
+- Live Site URL: [App](https://covolan.github.io/frontend-mentor1/four-card-feature-section-master/index.html)
 
 ## My process
 
