@@ -27,8 +27,8 @@ For this project I mainly used vanilla HTML with SASS as my CSS framework/tool, 
 
 ### Links
 
-- Solution URL: [Github-page](https://github.com/covolan/frontend-mentor/tree/main/3-column-preview-card-component-main)
-- Live Site URL: [Vercel hosting](https://3-column-preview-card-component-nine-beta.vercel.app/)
+- Solution URL: [Github](https://github.com/covolan/frontend-mentor/tree/main/3-column-preview-card-component-main)
+- Live Site URL: [Page](https://covolan.github.io/frontend-mentor1/3-column-preview-card-component-main/index.html)
 
 ## My process
 
