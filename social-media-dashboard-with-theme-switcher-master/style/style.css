@@ -86,6 +86,7 @@ main .dashboard__card {
   background-color: hsl(227, 47%, 96%);
   font-weight: 700;
   border-radius: 5px;
+  cursor: pointer;
 }
 main .dashboard__card .social {
   color: hsl(228, 12%, 44%);
@@ -162,6 +163,7 @@ main .dashboard__card .status {
   background-color: hsl(227, 47%, 96%);
   padding: 1.5em;
   border-radius: 5px;
+  cursor: pointer;
 }
 .overview__grid .overview__card .likes {
   font-size: 0.9em;

@@ -79,6 +79,8 @@ $very-dark-blue-text: hsl(230, 17%, 14%);
     }
 }
 
+
+
 @mixin alignCenterFlex {
   display: flex;
   align-items: center;
@@ -139,6 +141,7 @@ main {
     background-color: $light-grayish-blue-card-bg;
     font-weight: 700;
     border-radius: 5px;
+    cursor: pointer;
     .social {
       color: $dark-grayish-blue-text;
       @include alignCenterFlex;
@@ -212,6 +215,7 @@ main {
     background-color: $light-grayish-blue-card-bg;
     padding: 1.5em;
     border-radius: 5px;
+    cursor: pointer;
     .likes {
       font-size: 0.9em;
       color: $dark-grayish-blue-text;
