@@ -20,8 +20,8 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/covolan/frontend-mentor1/edit/main/product-preview-card-component-main/)
+- Live Site URL: [Page](https://covolan.github.io/frontend-mentor1/product-preview-card-component-main/index.html)
 
 ## My process
 
