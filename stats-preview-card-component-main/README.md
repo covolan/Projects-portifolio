@@ -24,8 +24,8 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 
 ### Links
 
-- Solution URL: [GitHub]()
-- Live Site URL: [Vercel]()
+- Solution URL: [GitHub](https://github.com/covolan/frontend-mentor1/edit/main/stats-preview-card-component-main/)
+- Live Site URL: [Page](https://covolan.github.io/frontend-mentor1/stats-preview-card-component-main/index.html)
 
 ## My process
 
