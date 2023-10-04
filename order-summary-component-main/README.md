@@ -25,7 +25,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 ### Links
 
 - Solution URL: [GitHub](https://github.com/covolan/frontend-mentor2/edit/main/order-summary-component-main)
-- Live Site URL: [Live webpage](https://order-summary-covolan.vercel.app/)
+- Live Site URL: [Page](https://covolan.github.io/frontend-mentor1/order-summary-component-main/index.html)
 
 ## My process
 

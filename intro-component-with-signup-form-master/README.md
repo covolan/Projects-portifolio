@@ -21,8 +21,8 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/covolan/frontend-mentor1/edit/main/intro-component-with-signup-form-master/)
+- Live Site URL: [Page](https://covolan.github.io/frontend-mentor1/intro-component-with-signup-form-master/index.html)
 
 ## My process
 
