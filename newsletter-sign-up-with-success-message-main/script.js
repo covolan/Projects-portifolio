@@ -8,6 +8,7 @@ const btnRet = document.querySelector(".ret");
 const email = document.querySelector("#email");
 const errorState = document.querySelector(".error__state-text")
 const content = document.querySelector(".information");
+const successEmail = document.querySelector(".success__message-email")
 
 form.addEventListener("submit", event => {
     event.preventDefault();
@@ -19,6 +20,7 @@ form.addEventListener("submit", event => {
         email.classList.remove("error__state-input");
         singUpPage.classList.add("hidden");
         thanksPage.classList.remove("hidden");
+        successEmail.textContent = email.value;
         email.value = "";
     }
 });
