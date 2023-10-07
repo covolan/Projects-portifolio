@@ -230,7 +230,7 @@ main {
 
   .grid-div {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1em;
   }
 
@@ -240,6 +240,10 @@ main {
 
   .junior {
     transition-delay: 400ms;
+  }
+
+  .intermediate {
+    transition-delay: 600ms;
   }
 
   .webpages {
@@ -275,6 +279,10 @@ main {
 
 .junior__card {
   border-top: 0.4em solid #aad742;
+}
+
+.intermediate__card {
+  border-top: 0.4em solid #f1b604;
 }
 
 // FOOTER LINKS
@@ -328,6 +336,11 @@ footer {
 // MEDIA RESPONSIVENESS
 
 @media screen and (max-width: 840px) {
+  main {
+    .grid-div {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
   header {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1px 1fr;
