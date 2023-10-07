@@ -19,8 +19,8 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/covolan/frontend-mentor1/edit/main/newsletter-sign-up-with-success-message-main/)
+- Live Site URL: [Page](https://covolan.github.io/frontend-mentor1/newsletter-sign-up-with-success-message-main/)
 
 ## My process
 
