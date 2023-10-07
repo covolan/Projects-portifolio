@@ -49,7 +49,7 @@ body {
   border-radius: 25px;
   transition: ease-in-out 0.3s;
 }
-.btn-learn-more :hover {
+.btn-learn-more:hover {
   background-color: hsla(0, 0%, 100%, 0.75);
   cursor: pointer;
 }

@@ -1,0 +1,31 @@
+// ### Primary
+
+$desaturated-dark-cyan: hsl(180, 29%, 50%);
+
+// ### Neutral
+
+$light-grayish-cyan-background: hsl(180, 52%, 96%);
+$light-grayish-cyan-filter-tablets: hsl(180, 31%, 95%);
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card__info {
+    .info {
+        display: flex;
+        gap: 1.5rem;
+        li:nth-child(1) {
+            list-style: none;
+        }
+    }
+}
