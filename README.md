@@ -20,10 +20,19 @@ If you want to view each project, just hop into my repo [page](https://covolan.g
 - Four card feature [directory](./four-card-feature-section-master/);
 - Faq accordion card [diretory](./faq-accordion-card-main/) (Being worked on);
 - interactive rating component [directory](./interactive-rating-component-main/);
+- Intro component with singup [directory](./intro-component-with-signup-form-master/);
+- ping comming soon [diretory](./ping-coming-soon-page-master/);
 
 ### Junior:
 
-- ping comming soon [diretory](./ping-coming-soon-page-master/);
+- Testimonials grid section [directory](./testimonials-grid-section-main/);
+- Advice generator app [directory](./advice-generator-app-main/);
+- Social media dashboard [directory](./social-media-dashboard-with-theme-switcher-master/);
+- Newsletter sign up [directory](./newsletter-sign-up-with-success-message-main/assets/);
+
+### Intermediate:
+
+- Static Job Listings [directory](./static-job-listings-master/);
 ---
 
 **Note: I'm not a native english speaker, so forgive-me for any misspellings**

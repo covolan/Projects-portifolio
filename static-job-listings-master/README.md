@@ -19,8 +19,8 @@ This is a solution to the [Job listings with filtering challenge on Frontend Men
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/covolan/frontend-mentor1/tree/main/static-job-listings-master )
+- Live Site URL: [Page](https://covolan.github.io/frontend-mentor1/static-job-listings-master/)
 
 ## My process
 
