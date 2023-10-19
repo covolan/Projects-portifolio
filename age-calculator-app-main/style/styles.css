@@ -60,7 +60,7 @@ main {
   transform: translateX(50%) translateY(110%);
 }
 .form-error {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400;
   color: hsl(0, 100%, 67%);
   font-style: italic;
@@ -80,4 +80,65 @@ main {
 .result-number {
   letter-spacing: 1rem;
   color: hsl(259, 100%, 65%);
+}
+
+.error-border {
+  border: 1px solid hsl(0, 100%, 67%) !important;
+}
+
+.error-text-color {
+  color: hsl(0, 100%, 67%) !important;
+}
+
+@media screen and (max-width: 830px) {
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  main {
+    height: unset;
+    width: 90%;
+    padding: 1.5rem;
+  }
+  .form {
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1.5rem;
+  }
+  .form-input {
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(0, 1%, 44%);
+    max-width: 5rem;
+  }
+  .form-btn {
+    padding: 0.3rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    transform: translateX(-260%) translateY(190%);
+  }
+  .form-icon {
+    scale: 0.6;
+  }
+  .form-error {
+    margin: 0.3rem 0 0.5rem 0;
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: hsl(0, 100%, 67%);
+  }
+  .result {
+    padding: 4rem 0;
+  }
+  .result-text {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: hsl(0, 0%, 8%);
+    font-style: italic;
+    line-height: 3.2rem;
+  }
+  .result-number {
+    letter-spacing: 0.2rem;
+    color: hsl(259, 100%, 65%);
+  }
 }/*# sourceMappingURL=styles.css.map */
