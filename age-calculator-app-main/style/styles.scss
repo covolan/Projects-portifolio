@@ -149,7 +149,7 @@ main {
     .result {
         padding: 4rem 0;
         &-text {
-            @include textTemplate(3.8rem, 800, $off-black);
+            @include textTemplate(3.5rem, 800, $off-black);
             line-height: 4.5rem;
         }
         &-number {
