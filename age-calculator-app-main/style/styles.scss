@@ -100,50 +100,60 @@ main {
     color: $light-red !important;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 830px) and (min-width: 700px) {
     .app {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        scale: 0.8;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .app {
+        scale: 0.9;
         width: 100%;
     }
     main {
         height: unset;
-        width: 90%;
+        width: 100%;
         padding: 1.5rem;
     }
+    
     .form {
         gap: 0.5rem;
-        grid-template-columns: 1fr 1fr 1fr 1.5rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 5px;
+        &-div {
+            display: flex;
+            flex-direction: column
+        }
+        &-label {
+            @include textTemplate(0.75rem, 400, $smokey-grey);
+            letter-spacing: 0.2rem;
+        }
         &-input {
-            @include textTemplate(1rem, 700, $smokey-grey);
-            max-width: 5rem;
+            @include textTemplate(1.2rem, 700, $smokey-grey);
+            max-width: 6.7rem;
         }
         &-btn {
-            padding: 0.3rem;
-            width: 3.5rem;
-            height: 3.5rem;
-            transform: translateX(-260%) translateY(190%);
+            padding: 0.5rem;
+            width: 4.3rem;
+            height: 4.3rem;
+            transform: translateX(210%) translateY(45%);
         }
         &-icon {
-            scale: 0.6;
+            scale: 0.8;
         }
         &-error {
-            margin: 0.3rem 0 0.5rem 0;
-        @include textTemplate(0.5rem, 400, $light-red);
-
+            @include textTemplate(0.62rem, 400, $light-red);
         }
     }
     .result {
         padding: 4rem 0;
         &-text {
-            @include textTemplate(2.5rem, 800, $off-black);
-            font-style: italic;
-            line-height: 3.2rem;
+            @include textTemplate(3.8rem, 800, $off-black);
+            line-height: 4.5rem;
         }
         &-number {
-            letter-spacing: 0.2rem;
-            color: $purple;
+            letter-spacing: 0.4rem;
         }
     }
 }

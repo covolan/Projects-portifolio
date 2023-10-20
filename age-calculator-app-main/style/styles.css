@@ -90,40 +90,53 @@ main {
   color: hsl(0, 100%, 67%) !important;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 830px) and (min-width: 700px) {
   .app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    scale: 0.8;
+  }
+}
+@media screen and (max-width: 700px) {
+  .app {
+    scale: 0.9;
     width: 100%;
   }
   main {
     height: unset;
-    width: 90%;
+    width: 100%;
     padding: 1.5rem;
   }
   .form {
     gap: 0.5rem;
-    grid-template-columns: 1fr 1fr 1fr 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5px;
+  }
+  .form-div {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-label {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: hsl(0, 1%, 44%);
+    letter-spacing: 0.2rem;
   }
   .form-input {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: hsl(0, 1%, 44%);
-    max-width: 5rem;
+    max-width: 6.7rem;
   }
   .form-btn {
-    padding: 0.3rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    transform: translateX(-260%) translateY(190%);
+    padding: 0.5rem;
+    width: 4.3rem;
+    height: 4.3rem;
+    transform: translateX(210%) translateY(45%);
   }
   .form-icon {
-    scale: 0.6;
+    scale: 0.8;
   }
   .form-error {
-    margin: 0.3rem 0 0.5rem 0;
-    font-size: 0.5rem;
+    font-size: 0.62rem;
     font-weight: 400;
     color: hsl(0, 100%, 67%);
   }
@@ -131,14 +144,12 @@ main {
     padding: 4rem 0;
   }
   .result-text {
-    font-size: 2.5rem;
+    font-size: 3.8rem;
     font-weight: 800;
     color: hsl(0, 0%, 8%);
-    font-style: italic;
-    line-height: 3.2rem;
+    line-height: 4.5rem;
   }
   .result-number {
-    letter-spacing: 0.2rem;
-    color: hsl(259, 100%, 65%);
+    letter-spacing: 0.4rem;
   }
 }/*# sourceMappingURL=styles.css.map */
