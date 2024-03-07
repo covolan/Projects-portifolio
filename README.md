@@ -1,6 +1,7 @@
 # Hi everyone :wave:
 
-This is my repo 1 for the Frontend Mentor challenges and projects!
+This is my repository for the Frontend Mentor challenges and projects!
+Also this is currently my portifolio page for all the projects in my journey so far.
 
 Feel free to explore and fork this repo. Comments and suggestions are welcome! :smile:
 
