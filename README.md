@@ -4,7 +4,7 @@ Linguagens: / Languages:
 - [🇧🇷](#introdução)
 - [🇺🇸](#introduction)
 
-
+![website preview](https://i.imgur.com/sgdfZ4f.png)
 
 ## Introdução 
 
